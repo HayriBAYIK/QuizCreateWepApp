@@ -1,0 +1,76 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<QuizCreateWepApp.VM.ExamListVM>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<div class="container mt-5 mb-5">
+
+    <h3>
+        Exam List
+    </h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">AddDate</th>
+                <th scope="col">Delete</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr id="exam_@item.Id">
+                    <td>@item.Id</td>
+                    <th scope="row"> <a href="Exam/Exam/@item.Id"> @item.Title</a></th>
+                    <td>@item.AddDate</td>
+                    <td><button class="" onclick="deleteExam(@item.Id)" id="@item.Id">Sil</button></td>
+
+
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+    function deleteExam(id) {
+
+        let text = "The record is being deleted, do you confirm?";
+
+        if (confirm(text) == true) {
+
+            $.ajax({
+                url: "/Exam/Delete/" + id,
+                type: 'GET',
+                success: function () {
+
+                    $("#exam_" + id).fadeOut();
+                    alert("Delete Successful");
+                },
+                error: function (err) {
+                    alert(err);
+                }
+            });
+
+        } else {
+
+            alert("Delete Failed");
+
+        }
+    }
+
+
+
+
+
+
+</script>

@@ -1,0 +1,359 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model QuizCreateWepApp.VM.CreateExamVM
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<div class="container mt-5 mb-5">
+
+    <form id="CreateExamForm" action="/Exam/CreateExam" method="post">
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        @Html.HiddenFor(q => q.Title, new { @id = "titlehidden" })
+        <div class="row">
+            <select class="form-control mt-5" id="drpTitle" name="">
+                <option selected>Choose Title</option>
+                @foreach (var item in Model.drpTitles)
+                {
+                    @if (Model.Title != null && Model.Title.TrimStart() == item.title)
+                    {
+
+                        <option value="@item.desc" selected> @item.title</option>
+
+
+                    }
+                    else
+                    {
+                        <option value="@item.desc"> @item.title</option>
+                    }
+
+
+                }
+            </select>
+        </div>
+
+        <div class="row mt-5">
+            <textarea id="Description" name="Description" class="form-control" style="height:350px;" readonly></textarea>
+        </div>
+
+
+
+
+        <div class="container mt-5">
+            <div class="row">
+                @Html.LabelFor(q => q.Q1, new { @class = "font-weight-bold" })
+                @Html.TextAreaFor(q => q.Q1, new { @class = "form-control" })
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer1a)
+                    @Html.TextAreaFor(q => q.answer1a, new { @class = "form-control" })
+                </div>
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer1b)
+                    @Html.TextAreaFor(q => q.answer1b, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer1c)
+                    @Html.TextAreaFor(q => q.answer1c, new { @class = "form-control" })
+                </div>
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer1d)
+                    @Html.TextAreaFor(q => q.answer1d, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="row center">
+                <div class="col-3">
+                </div>
+                <div class="col-6 mt-4 ">
+                    @Html.LabelFor(q => q.correctAnswerQ1)
+                    <select class="form-control mb-5" id="correctAnswerQ1" name="correctAnswerQ1">
+                        <option value=""></option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="container mt-5">
+            <div class="row">
+                @Html.LabelFor(q => q.Q2, new { @class = "font-weight-bold" })
+                @Html.TextAreaFor(q => q.Q2, new { @class = "form-control" })
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer2a)
+                    @Html.TextAreaFor(q => q.answer2a, new { @class = "form-control" })
+                </div>
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer2b)
+                    @Html.TextAreaFor(q => q.answer2b, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer2c)
+                    @Html.TextAreaFor(q => q.answer2c, new { @class = "form-control" })
+                </div>
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer2d)
+                    @Html.TextAreaFor(q => q.answer2d, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="row center">
+                <div class="col-3">
+                </div>
+                <div class="col-6 mt-4 ">
+                    @Html.LabelFor(q => q.correctAnswerQ2)
+                    <select class="form-control mb-5" id="correctAnswerQ2" name="correctAnswerQ2">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="container mt-5">
+            <div class="row">
+                @Html.LabelFor(q => q.Q3, new { @class = "font-weight-bold" })
+                @Html.TextAreaFor(q => q.Q3, new { @class = "form-control" })
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer3a)
+                    @Html.TextAreaFor(q => q.answer3a, new { @class = "form-control" })
+                </div>
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer3b)
+                    @Html.TextAreaFor(q => q.answer3b, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer3c)
+                    @Html.TextAreaFor(q => q.answer3c, new { @class = "form-control" })
+                </div>
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer3d)
+                    @Html.TextAreaFor(q => q.answer3d, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="row center">
+                <div class="col-3">
+                </div>
+                <div class="col-6 mt-4 ">
+                    @Html.LabelFor(q => q.correctAnswerQ3)
+                    <select class="form-control mb-5" id="correctAnswerQ3" name="correctAnswerQ3">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="container mt-5">
+            <div class="row">
+                @Html.LabelFor(q => q.Q4, new { @class = "font-weight-bold" })
+                @Html.TextAreaFor(q => q.Q4, new { @class = "form-control" })
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer4a)
+                    @Html.TextAreaFor(q => q.answer4a, new { @class = "form-control" })
+                </div>
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer4b)
+                    @Html.TextAreaFor(q => q.answer4b, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer4c)
+                    @Html.TextAreaFor(q => q.answer4c, new { @class = "form-control" })
+                </div>
+                <div class="col">
+
+                    @Html.LabelFor(q => q.answer4d)
+                    @Html.TextAreaFor(q => q.answer4d, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="row center">
+                <div class="col-3">
+                </div>
+                <div class="col-6 mt-4 ">
+                    @Html.LabelFor(q => q.correctAnswerQ4)
+                    <select class="form-control mb-5" id="correctAnswerQ4" name="correctAnswerQ4">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                </div>
+
+            </div>
+        </div>
+        <div class="row center">
+            <div class="col-3">
+            </div>
+            <div class="col-6 mt-4 ">
+                <button type="submit" class="btn btn-secondary form-control btn-lg">Create Exam</button>
+
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+
+
+
+    </form>
+</div>
+
+
+<script language="javascript" type="text/javascript">
+
+    $(document).ready(function () {
+        var textarea = $('textarea');
+        var label = $('label');
+        var hr = $('hr');
+        var answer1 = $('#correctAnswerQ1');
+        var answer2 = $('#correctAnswerQ2');
+        var answer3 = $('#correctAnswerQ3');
+        var answer4 = $('#correctAnswerQ4');
+        var button = $('button');
+
+        if ($('#drpTitle option:selected').text() != "Choose Title") {
+            console.log($('#drpTitle option:selected').text());
+            console.log("burda")
+            var value = $('#drpTitle').val();
+            $('#Description').html(value);
+            textarea.show();
+            label.show();
+            answer1.show();
+            answer2.show();
+            answer3.show();
+            answer4.show();
+            hr.show();
+            button.show();
+
+        } else {
+            textarea.hide();
+            label.hide();
+            answer1.hide();
+            answer2.hide();
+            answer3.hide();
+            answer4.hide();
+            hr.hide();
+            button.hide();
+
+        }
+
+
+
+
+
+
+        $("#drpTitle").change(function () {
+
+            var value = $('#drpTitle').val();
+            $('#titlehidden').val($('#drpTitle option:selected').text());
+
+            console.log($('#titlehidden').val())
+            if (value == "Choose Title") {
+
+                textarea.hide();
+                label.hide();
+                answer1.hide();
+                answer2.hide();
+                answer3.hide();
+                answer4.hide();
+                hr.hide();
+                button.hide();
+
+
+
+            }
+            if ($('#drpTitle option:selected').text() != "Choose Title") {
+                console.log("show");
+                $('#Description').html(value);
+                textarea.show();
+                label.show();
+                answer1.show();
+                answer2.show();
+                answer3.show();
+                answer4.show();
+                hr.show();
+                button.show();
+
+            }
+
+
+
+
+
+        });
+
+    });
+
+
+</script>

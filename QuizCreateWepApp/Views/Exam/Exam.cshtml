@@ -1,0 +1,413 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model QuizCreateWepApp.VM.ExamVM
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<style>
+    .border {
+        cursor: pointer;
+    }
+
+        .border:hover {
+            background: #71B1ED;
+        }
+</style>
+
+
+<div class="container mt-5 mb-5">
+
+
+
+
+    <div class="row mb-5 font-weight-bold h3">
+
+        @Html.DisplayFor(q => q.Title, new { @class = "form-control" })
+    </div>
+
+    <div class="row mb-5">
+
+        @Html.DisplayFor(q => q.Description, new { @class = "form-control" })
+    </div>
+
+
+    <div class="row mt-5">
+        <div class="row mb-5">
+            <div class="col ml-2 d-flex flex-column justify-content-between">
+                <div class="p-2">
+                    @Html.LabelFor(q => q.Question1)
+                    @Html.DisplayFor(q => q.Question1, new { @class = "form-control" })
+                </div>
+
+                <div class="p-2">
+                    <div class="p-2 border border-dark mt-4 answer1 answer1a">
+                        @Html.LabelFor(q => q.Answer1a)
+                        @Html.DisplayFor(q => q.Answer1a, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer1 answer1b">
+                        @Html.LabelFor(q => q.Answer1b)
+                        @Html.DisplayFor(q => q.Answer1b, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer1 answer1c">
+                        @Html.LabelFor(q => q.Answer1c)
+                        @Html.DisplayFor(q => q.Answer1c, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer1 answer1d">
+                        @Html.LabelFor(q => q.Answer1d)
+                        @Html.DisplayFor(q => q.Answer1d, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="col ml-2 d-flex flex-column justify-content-between">
+                <div class="p-2">
+                    @Html.LabelFor(q => q.Question2)
+                    @Html.DisplayFor(q => q.Question2, new { @class = "form-control" })
+                </div>
+
+                <div class="p-2">
+                    <div class="p-2 border border-dark mt-4 answer2 answer2a">
+                        @Html.LabelFor(q => q.Answer2a)
+                        @Html.DisplayFor(q => q.Answer2a, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer2 answer2b">
+                        @Html.LabelFor(q => q.Answer2b)
+                        @Html.DisplayFor(q => q.Answer2b, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer2 answer2c">
+                        @Html.LabelFor(q => q.Answer2c)
+                        @Html.DisplayFor(q => q.Answer2c, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer2 answer2d">
+                        @Html.LabelFor(q => q.Answer2d)
+                        @Html.DisplayFor(q => q.Answer2d, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col ml-2 d-flex flex-column justify-content-between">
+                <div class="p-2">
+                    @Html.LabelFor(q => q.Question3)
+                    @Html.DisplayFor(q => q.Question3, new { @class = "form-control" })
+                </div>
+
+                <div class="p-2">
+                    <div class="p-2 border border-dark mt-4 answer3 answer3a">
+                        @Html.LabelFor(q => q.Answer3a)
+                        @Html.DisplayFor(q => q.Answer3a, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer3 answer3b">
+                        @Html.LabelFor(q => q.Answer3b)
+                        @Html.DisplayFor(q => q.Answer3b, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer3 answer3c">
+                        @Html.LabelFor(q => q.Answer3c)
+                        @Html.DisplayFor(q => q.Answer3c, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer3 answer3d">
+                        @Html.LabelFor(q => q.Answer3d)
+                        @Html.DisplayFor(q => q.Answer3d, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="col ml-2 d-flex flex-column justify-content-between">
+                <div class="p-2">
+                    @Html.LabelFor(q => q.Question4)
+                    @Html.DisplayFor(q => q.Question4, new { @class = "form-control" })
+                </div>
+
+                <div class="p-2">
+                    <div class="p-2 border border-dark mt-4 answer4 answer4a">
+                        @Html.LabelFor(q => q.Answer4a)
+                        @Html.DisplayFor(q => q.Answer4a, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer4 answer4b">
+                        @Html.LabelFor(q => q.Answer4b)
+                        @Html.DisplayFor(q => q.Answer4b, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer4 answer4c">
+                        @Html.LabelFor(q => q.Answer4c)
+                        @Html.DisplayFor(q => q.Answer4c, new { @class = "form-control" })
+                    </div>
+                    <div class="p-2 border border-dark mt-2 answer4 answer4d">
+                        @Html.LabelFor(q => q.Answer4d)
+                        @Html.DisplayFor(q => q.Answer4d, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row center">
+        <div class="col-3">
+        </div>
+        <div class="col-6 mt-4 ">
+            <button class="btn btn-secondary form-control btn-lg" onclick="finishExam(@Model.Id)" id="@Model.Id">Finish exam</button>
+
+
+        </div>
+        <div class="col-3">
+        </div>
+    </div>
+
+</div>
+
+
+<script language="javascript" type="text/javascript">
+
+
+    var Answers = new Object();
+    Answers.answer1 = null;
+    Answers.answer2 = null;
+    Answers.answer3 = null;
+    Answers.answer4 = null;
+    var correctAnswer = 0;
+    var wrongAnswer = 0;
+    var blankAnswer = 0;
+
+
+
+
+    function finishExam(id) {
+
+        Answers.id = id;
+        let text = "The exam is being finished, do you confirm?";
+
+
+        if (confirm(text) == true) {
+
+            $.ajax({
+                url: "/Exam/FinishExam",
+                type: "POST",
+                data: Answers,
+                success: function (res) {
+
+                    if (res.resultAnswer1 == 1) {
+                        $(".answer1" + res.correctAnswer1).css({ 'background-color': 'green' });
+                        correctAnswer++;
+
+                    }
+                    else {
+                        if (res.resultAnswer1 == 0) {
+
+                            $(".answer1" + res.correctAnswer1).css({ 'background-color': 'green' });
+                            $(".answer1" + res.answer1).css({ 'background-color': 'red' });
+                            wrongAnswer++;
+                        } else {
+                            blankAnswer++;
+                            //boş soru
+
+                        }
+                    }
+                    if (res.resultAnswer2 == 1) {
+                        $(".answer2" + res.correctAnswer2).css({ 'background-color': 'green' });
+                        correctAnswer++;
+                    }
+                    else {
+                        if (res.resultAnswer2 == 0) {
+
+                            $(".answer2" + res.correctAnswer2).css({ 'background-color': 'green' });
+                            $(".answer2" + res.answer2).css({ 'background-color': 'red' });
+                            wrongAnswer++;
+                        } else {
+                            blankAnswer++;
+                            //boş soru
+
+                        }
+                    }
+                    if (res.resultAnswer3 == 1) {
+                        $(".answer3" + res.correctAnswer3).css({ 'background-color': 'green' });
+                        correctAnswer++;
+                    }
+                    else {
+                        if (res.resultAnswer3 == 0) {
+
+                            $(".answer3" + res.correctAnswer3).css({ 'background-color': 'green' });
+                            $(".answer3" + res.answer3).css({ 'background-color': 'red' });
+                            wrongAnswer++;
+                        } else {
+                            blankAnswer++;
+                            //boş soru
+
+                        }
+                    }
+                    if (res.resultAnswer4 == 1) {
+                        $(".answer4" + res.correctAnswer4).css({ 'background-color': 'green' });
+                        correctAnswer++;
+                    }
+                    else {
+                        if (res.resultAnswer4 == 0) {
+
+                            $(".answer4" + res.correctAnswer4).css({ 'background-color': 'green' });
+                            $(".answer4" + res.answer4).css({ 'background-color': 'red' });
+                            wrongAnswer++;
+                        } else {
+                            blankAnswer++;
+                            //boş soru
+
+                        }
+                    }
+
+
+                    console.log(res.resultAnswer1 + " " + res.correctAnswer1);
+                    console.log(res.resultAnswer2 + " " + res.correctAnswer2);
+                    console.log(res.resultAnswer3 + " " + res.correctAnswer3);
+                    console.log(res.resultAnswer4 + " " + res.correctAnswer4);
+
+                    $('button').attr('disabled', 'disabled');
+
+                    var result = "number of correct answers: " + correctAnswer + " - " + "number of wrong answers: " + wrongAnswer + " - " + "number of blank answers: " + blankAnswer;
+
+                    alert(result);
+                },
+                error: function (err) {
+                    alert(err);
+                }
+            });
+
+        } else {
+
+            alert("Cancelled");
+
+        }
+
+    }
+
+
+
+
+
+
+
+    $(".answer1").click(function () {
+        if (Answers.answer1 == null) {
+
+            console.log("null")
+            $(this).css("background-color", "#71B1ED");
+            s1 = $(this);
+            Answers.answer1 = $(this).text().trimStart().substring(0, 1);
+            console.log("1 " + Answers.answer1);
+
+        } else {
+
+            if (Answers.answer1 == $(this).text().trimStart().substring(0, 1)) {
+
+                console.log("seçimi kaldır")
+                $(".answer1").css({ 'background-color': '' });
+                s1 = $(this);
+                Answers.answer1 = null;
+
+            } else {
+
+                $(".answer1").css({ 'background-color': '' });
+                $(this).css("background-color", "#71B1ED");
+                s1 = $(this);
+                Answers.answer1 = $(this).text().trimStart().substring(0, 1);
+                console.log("1 " + Answers.answer1);
+            }
+        }
+
+
+    });
+
+    $(".answer2").click(function () {
+
+        if (Answers.answer2 == null) {
+
+            console.log("null")
+            $(this).css("background-color", "#71B1ED");
+            s2 = $(this);
+            Answers.answer2 = $(this).text().trimStart().substring(0, 1);
+            console.log("2 " + Answers.answer2);
+
+        } else {
+
+            if (Answers.answer2 == $(this).text().trimStart().substring(0, 1)) {
+
+                console.log("seçimi kaldır")
+                $(".answer2").css({ 'background-color': '' });
+                Answers.answer2 = null;
+
+            } else {
+
+                $(".answer2").css({ 'background-color': '' });
+                s2 = $(this);
+                $(this).css("background-color", "#71B1ED");
+                Answers.answer2 = $(this).text().trimStart().substring(0, 1);
+                console.log("2 " + Answers.answer2);
+            }
+        }
+
+
+    });
+
+    $(".answer3").click(function () {
+
+        if (Answers.answer3 == null) {
+
+            console.log("null")
+            s3 = $(this);
+            $(this).css("background-color", "#71B1ED");
+            Answers.answer3 = $(this).text().trimStart().substring(0, 1);
+            console.log("3 " + Answers.answer3);
+
+        } else {
+
+            if (Answers.answer3 == $(this).text().trimStart().substring(0, 1)) {
+
+                console.log("seçimi kaldır")
+                $(".answer3").css({ 'background-color': '' });
+                Answers.answer3 = null;
+
+            } else {
+
+                s3 = $(this);
+                $(".answer3").css({ 'background-color': '' });
+                $(this).css("background-color", "#71B1ED");
+                Answers.answer3 = $(this).text().trimStart().substring(0, 1);
+                console.log("3 " + Answers.answer3);
+            }
+        }
+
+    });
+
+    $(".answer4").click(function () {
+
+        if (Answers.answer4 == null) {
+
+            s4 = $(this);
+            console.log("null")
+            $(this).css("background-color", "#71B1ED");
+            Answers.answer4 = $(this).text().trimStart().substring(0, 1);
+            console.log("4 " + Answers.answer4);
+
+        } else {
+
+            if (Answers.answer4 == $(this).text().trimStart().substring(0, 1)) {
+
+                console.log("seçimi kaldır")
+                $(".answer4").css({ 'background-color': '' });
+                Answers.answer4 = null;
+
+            } else {
+
+                s4 = $(this);
+                $(".answer4").css({ 'background-color': '' });
+                $(this).css("background-color", "#71B1ED");
+                Answers.answer4 = $(this).text().trimStart().substring(0, 1);
+                console.log("4 " + Answers.answer4);
+            }
+        }
+
+    });
+
+</script>
