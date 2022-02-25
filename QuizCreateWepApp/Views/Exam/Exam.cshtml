@@ -5,8 +5,6 @@
 @model QuizCreateWepApp.VM.ExamVM
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
 <style>
@@ -45,19 +43,19 @@
                 </div>
 
                 <div class="p-2">
-                    <div class="p-2 border border-dark mt-4 answer1 answer1a">
+                    <div class="p-2 border border-dark mt-4 answer1 answer1A">
                         @Html.LabelFor(q => q.Answer1a)
                         @Html.DisplayFor(q => q.Answer1a, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer1 answer1b">
+                    <div class="p-2 border border-dark mt-2 answer1 answer1B">
                         @Html.LabelFor(q => q.Answer1b)
                         @Html.DisplayFor(q => q.Answer1b, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer1 answer1c">
+                    <div class="p-2 border border-dark mt-2 answer1 answer1C">
                         @Html.LabelFor(q => q.Answer1c)
                         @Html.DisplayFor(q => q.Answer1c, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer1 answer1d">
+                    <div class="p-2 border border-dark mt-2 answer1 answer1D">
                         @Html.LabelFor(q => q.Answer1d)
                         @Html.DisplayFor(q => q.Answer1d, new { @class = "form-control" })
                     </div>
@@ -71,19 +69,19 @@
                 </div>
 
                 <div class="p-2">
-                    <div class="p-2 border border-dark mt-4 answer2 answer2a">
+                    <div class="p-2 border border-dark mt-4 answer2 answer2A">
                         @Html.LabelFor(q => q.Answer2a)
                         @Html.DisplayFor(q => q.Answer2a, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer2 answer2b">
+                    <div class="p-2 border border-dark mt-2 answer2 answer2B">
                         @Html.LabelFor(q => q.Answer2b)
                         @Html.DisplayFor(q => q.Answer2b, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer2 answer2c">
+                    <div class="p-2 border border-dark mt-2 answer2 answer2C">
                         @Html.LabelFor(q => q.Answer2c)
                         @Html.DisplayFor(q => q.Answer2c, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer2 answer2d">
+                    <div class="p-2 border border-dark mt-2 answer2 answer2D">
                         @Html.LabelFor(q => q.Answer2d)
                         @Html.DisplayFor(q => q.Answer2d, new { @class = "form-control" })
                     </div>
@@ -99,19 +97,19 @@
                 </div>
 
                 <div class="p-2">
-                    <div class="p-2 border border-dark mt-4 answer3 answer3a">
+                    <div class="p-2 border border-dark mt-4 answer3 answer3A">
                         @Html.LabelFor(q => q.Answer3a)
                         @Html.DisplayFor(q => q.Answer3a, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer3 answer3b">
+                    <div class="p-2 border border-dark mt-2 answer3 answer3B">
                         @Html.LabelFor(q => q.Answer3b)
                         @Html.DisplayFor(q => q.Answer3b, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer3 answer3c">
+                    <div class="p-2 border border-dark mt-2 answer3 answer3C">
                         @Html.LabelFor(q => q.Answer3c)
                         @Html.DisplayFor(q => q.Answer3c, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer3 answer3d">
+                    <div class="p-2 border border-dark mt-2 answer3 answer3D">
                         @Html.LabelFor(q => q.Answer3d)
                         @Html.DisplayFor(q => q.Answer3d, new { @class = "form-control" })
                     </div>
@@ -125,19 +123,19 @@
                 </div>
 
                 <div class="p-2">
-                    <div class="p-2 border border-dark mt-4 answer4 answer4a">
+                    <div class="p-2 border border-dark mt-4 answer4 answer4A">
                         @Html.LabelFor(q => q.Answer4a)
                         @Html.DisplayFor(q => q.Answer4a, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer4 answer4b">
+                    <div class="p-2 border border-dark mt-2 answer4 answer4C">
                         @Html.LabelFor(q => q.Answer4b)
                         @Html.DisplayFor(q => q.Answer4b, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer4 answer4c">
+                    <div class="p-2 border border-dark mt-2 answer4 answer4C">
                         @Html.LabelFor(q => q.Answer4c)
                         @Html.DisplayFor(q => q.Answer4c, new { @class = "form-control" })
                     </div>
-                    <div class="p-2 border border-dark mt-2 answer4 answer4d">
+                    <div class="p-2 border border-dark mt-2 answer4 answer4D">
                         @Html.LabelFor(q => q.Answer4d)
                         @Html.DisplayFor(q => q.Answer4d, new { @class = "form-control" })
                     </div>
@@ -190,7 +188,7 @@
                 type: "POST",
                 data: Answers,
                 success: function (res) {
-
+                    console.log("Res")
                     if (res.resultAnswer1 == 1) {
                         $(".answer1" + res.correctAnswer1).css({ 'background-color': 'green' });
                         correctAnswer++;
